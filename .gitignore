@@ -1,0 +1,11 @@
+data/
+/data
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+results/raw/
+.DS_Store
+logs/
+.CondaPkg/

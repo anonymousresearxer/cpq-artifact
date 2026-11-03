@@ -1,0 +1,53 @@
+{
+  "query": "measured",
+  "tensors": [
+    {
+      "name": "b1",
+      "table": "QMC",
+      "axes": [
+        {
+          "column": "phi",
+          "index": "c"
+        },
+        {
+          "column": "psi",
+          "index": "a"
+        }
+      ]
+    },
+    {
+      "name": "b2",
+      "table": "QAlinks",
+      "axes": [
+        {
+          "column": "qa",
+          "index": "a"
+        },
+        {
+          "column": "ql",
+          "index": "q"
+        }
+      ]
+    }
+  ],
+  "indices": [
+    {
+      "name": "c",
+      "sort": "CCs",
+      "kind": "ob"
+    },
+    {
+      "name": "a",
+      "sort": "QAs",
+      "kind": "ob"
+    },
+    {
+      "name": "q",
+      "sort": "Qs",
+      "kind": "ob"
+    }
+  ],
+  "einsum": "ab,bc->",
+  "output": []
+}
+

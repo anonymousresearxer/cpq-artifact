@@ -1,0 +1,56 @@
+{
+  "query": "pairs",
+  "tensors": [
+    {
+      "name": "b1",
+      "table": "CClinks",
+      "axes": [
+        {
+          "column": "cc",
+          "index": "c"
+        },
+        {
+          "column": "cf",
+          "index": "f"
+        }
+      ]
+    },
+    {
+      "name": "b2",
+      "table": "CClinks",
+      "axes": [
+        {
+          "column": "cc",
+          "index": "c"
+        },
+        {
+          "column": "cf",
+          "index": "g"
+        }
+      ]
+    }
+  ],
+  "indices": [
+    {
+      "name": "c",
+      "sort": "CCs",
+      "kind": "ob"
+    },
+    {
+      "name": "f",
+      "sort": "Fs",
+      "kind": "ob"
+    },
+    {
+      "name": "g",
+      "sort": "Fs",
+      "kind": "ob"
+    }
+  ],
+  "einsum": "ab,ac->bc",
+  "output": [
+    "f",
+    "g"
+  ]
+}
+

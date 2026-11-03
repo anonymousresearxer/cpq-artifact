@@ -1,0 +1,56 @@
+{
+  "query": "pairs_vc",
+  "tensors": [
+    {
+      "name": "b1",
+      "table": "VClinks",
+      "axes": [
+        {
+          "column": "vc",
+          "index": "u"
+        },
+        {
+          "column": "vf",
+          "index": "f"
+        }
+      ]
+    },
+    {
+      "name": "b2",
+      "table": "VClinks",
+      "axes": [
+        {
+          "column": "vc",
+          "index": "u"
+        },
+        {
+          "column": "vf",
+          "index": "g"
+        }
+      ]
+    }
+  ],
+  "indices": [
+    {
+      "name": "u",
+      "sort": "VCs",
+      "kind": "ob"
+    },
+    {
+      "name": "f",
+      "sort": "Fs",
+      "kind": "ob"
+    },
+    {
+      "name": "g",
+      "sort": "Fs",
+      "kind": "ob"
+    }
+  ],
+  "einsum": "ab,ac->bc",
+  "output": [
+    "f",
+    "g"
+  ]
+}
+

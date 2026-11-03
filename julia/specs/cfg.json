@@ -1,0 +1,25 @@
+{
+  "query": "cfg",
+  "tensors": [
+    {
+      "name": "b1",
+      "table": "Cfg",
+      "axes": [
+        {
+          "column": "_id",
+          "index": "c"
+        }
+      ]
+    }
+  ],
+  "indices": [
+    {
+      "name": "c",
+      "sort": "Cfg",
+      "kind": "ob"
+    }
+  ],
+  "einsum": "a->",
+  "output": []
+}
+

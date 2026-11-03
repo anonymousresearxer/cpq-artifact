@@ -1,0 +1,28 @@
+name = "QVMPlus"
+uuid = "5f8a3c2e-9d41-4b7a-8e6f-2c1d0b9a7e34"
+version = "0.1.0"
+
+[deps]
+ACSets = "227ef7b5-1206-438b-ac65-934d6da304b8"
+Catlab = "134e5e36-593f-5add-ad60-77f754baafbe"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+
+[weakdeps]
+PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
+
+[extensions]
+QVMPlusPythonExt = "PythonCall"
+
+[compat]
+ACSets = "0.2.29"
+Catlab = "0.17.6"
+JSON = "0.21.4"
+PythonCall = "0.9.36"
+julia = "1.13"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

@@ -1,0 +1,56 @@
+{
+  "query": "noise",
+  "tensors": [
+    {
+      "name": "b1",
+      "table": "Noise",
+      "axes": [
+        {
+          "column": "nq",
+          "index": "q"
+        },
+        {
+          "column": "eps",
+          "index": "e"
+        }
+      ]
+    },
+    {
+      "name": "b2",
+      "table": "Qs",
+      "axes": [
+        {
+          "column": "_id",
+          "index": "q"
+        },
+        {
+          "column": "value",
+          "index": "v"
+        }
+      ]
+    }
+  ],
+  "indices": [
+    {
+      "name": "q",
+      "sort": "Qs",
+      "kind": "ob"
+    },
+    {
+      "name": "v",
+      "sort": "Z",
+      "kind": "attr"
+    },
+    {
+      "name": "e",
+      "sort": "R",
+      "kind": "attr"
+    }
+  ],
+  "einsum": "ac,ab->bc",
+  "output": [
+    "v",
+    "e"
+  ]
+}
+

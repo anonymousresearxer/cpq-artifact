@@ -1,0 +1,11 @@
+{
+  "julia": "^1.13",
+  "packages": {
+    "Catlab": {"uuid": "134e5e36-593f-5add-ad60-77f754baafbe", "version": "=0.17.6"},
+    "QVMPlus": {
+      "uuid": "5f8a3c2e-9d41-4b7a-8e6f-2c1d0b9a7e34",
+      "dev": true,
+      "path": "../../julia"
+    }
+  }
+}

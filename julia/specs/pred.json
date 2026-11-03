@@ -1,0 +1,44 @@
+{
+  "query": "pred",
+  "tensors": [
+    {
+      "name": "b1",
+      "table": "Pred",
+      "axes": [
+        {
+          "column": "pcfg",
+          "index": "g"
+        }
+      ]
+    },
+    {
+      "name": "b2",
+      "table": "VCs",
+      "axes": [
+        {
+          "column": "_id",
+          "index": "u"
+        },
+        {
+          "column": "vc_cfg",
+          "index": "g"
+        }
+      ]
+    }
+  ],
+  "indices": [
+    {
+      "name": "g",
+      "sort": "Cfg",
+      "kind": "ob"
+    },
+    {
+      "name": "u",
+      "sort": "VCs",
+      "kind": "ob"
+    }
+  ],
+  "einsum": "a,ba->",
+  "output": []
+}
+

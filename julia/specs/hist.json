@@ -1,0 +1,74 @@
+{
+  "query": "hist",
+  "tensors": [
+    {
+      "name": "b1",
+      "table": "QMC",
+      "axes": [
+        {
+          "column": "phi",
+          "index": "c"
+        },
+        {
+          "column": "psi",
+          "index": "a"
+        }
+      ]
+    },
+    {
+      "name": "b2",
+      "table": "QAlinks",
+      "axes": [
+        {
+          "column": "qa",
+          "index": "a"
+        },
+        {
+          "column": "ql",
+          "index": "q"
+        }
+      ]
+    },
+    {
+      "name": "b3",
+      "table": "Qs",
+      "axes": [
+        {
+          "column": "_id",
+          "index": "q"
+        },
+        {
+          "column": "value",
+          "index": "v"
+        }
+      ]
+    }
+  ],
+  "indices": [
+    {
+      "name": "c",
+      "sort": "CCs",
+      "kind": "ob"
+    },
+    {
+      "name": "a",
+      "sort": "QAs",
+      "kind": "ob"
+    },
+    {
+      "name": "q",
+      "sort": "Qs",
+      "kind": "ob"
+    },
+    {
+      "name": "v",
+      "sort": "Z",
+      "kind": "attr"
+    }
+  ],
+  "einsum": "ab,bc,cd->d",
+  "output": [
+    "v"
+  ]
+}
+
